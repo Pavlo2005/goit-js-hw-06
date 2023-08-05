@@ -6,8 +6,8 @@ const elements = {
 elements.input.addEventListener('input', handlerSearch);
 
 function handlerSearch(evt) {
-    if (evt.currentTarget.value.length > 0)
-        elements.name.textContent = evt.currentTarget.value;
+    if (evt.currentTarget.value.trim().length > 0)
+        elements.name.textContent = evt.currentTarget.value.trim();
     else
         elements.name.textContent = 'Anonymous';
 }
